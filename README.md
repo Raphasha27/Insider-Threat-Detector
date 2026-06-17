@@ -27,6 +27,20 @@ Advanced insider threat detection simulator that models nation-state actors, mal
 - **Alert Generation** — Real-time alerting with playbook recommendations
 - **Reporting Dashboard** — Executive summaries and detailed logs
 
+
+## Architecture
+
+```mermaid
+graph LR
+    USER[User] --> API[FastAPI]
+    API --> PROC[Processor]
+    PROC --> DB[(Database)]
+    API --> AUTH[Auth Layer]
+    PROC --> AI[AI/ML Engine]
+```
+
+Microservices-based architecture with API Gateway, authentication layer, PostgreSQL persistence, and event-driven communication.
+
 ## Quick Start
 
 ```bash
